@@ -4,10 +4,7 @@
 public class Fan {
     // Four constants named STOPPED, SLOW, MEDIUM, and FAST.
     // The constants are to hold the values of 0, 1, 2, and 3 respectively.
-    public static final int STOPPED = 0;
-    public static final int SLOW = 1;
-    public static final int MEDIUM = 2;
-    public static final int FAST = 3;
+
     // A private int data field named speed that specifies the speed of the fan.
     // A private boolean data field named on that specifies whether the fan is on or off.
     // A private double data field named radius that specifies the radius of the fan.
@@ -72,14 +69,5 @@ public class Fan {
         } else {
             return "The fan is " + getColor() + " with a radius of " + getRadius() + " and the fan is off";
         }
-    }
-
-    // Write test code that creates two instances of the Fan class, one using the default constructor and the other using the argument constructor.
-    // Write code that displays the functionality of the Fan class methods
-    public static void main(String args[]) {
-        Fan f1 = new Fan();
-        Fan f2 = new Fan(MEDIUM, true, 8, "Blue");
-        System.out.println(f1.toString());
-        System.out.println(f2.toString());
     }
 }
