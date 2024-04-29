@@ -1,0 +1,71 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "KunnisseryFutureValueApp",
+            "request": "launch",
+            "vmArgs": "--module-path C:/Users/priya/Java/openjfx-22.0.1_windows-x64_bin-sdk/javafx-sdk-22.0.1/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "FutureValueApp.KunnisseryFutureValueApp",
+            "projectName": "CIS-505_3e2dc24d"
+        },
+        {
+            "type": "java",
+            "name": "KunnisseryHelloWorld",
+            "request": "launch",
+            "mainClass": "Module_1.HelloWorldApp.KunnisseryHelloWorld",
+            "projectName": "CIS-505_3e2dc24d"
+        },
+        {
+            "type": "java",
+            "name": "TestSportsTeamApp",
+            "request": "launch",
+            "mainClass": "Module_2.SportsTeamApp.TestSportsTeamApp",
+            "projectName": "CIS-505_3e2dc24d"
+        },
+        {
+            "type": "java",
+            "name": "TestCustomerAccountApp",
+            "request": "launch",
+            "mainClass": "Module_3.CustomerAccountApp.TestCustomerAccountApp",
+            "projectName": "CIS-505_3e2dc24d"
+        },
+        {
+            "type": "java",
+            "name": "TestBowlingShopApp",
+            "request": "launch",
+            "mainClass": "Module_4.BowlingShopApp.TestBowlingShopApp",
+            "projectName": "CIS-505_3e2dc24d"
+        },
+        {
+            "type": "java",
+            "name": "TestExpenseTracker",
+            "request": "launch",
+            "mainClass": "Module_5.ExpenseTracker.TestExpenseTracker",
+            "projectName": "CIS-505_3e2dc24d"
+        },
+        {
+            "type": "java",
+            "name": "TestComposerApp",
+            "request": "launch",
+            "mainClass": "TestComposerApp",
+            "projectName": "CIS-505_3e2dc24d"
+        },
+        {
+            "type": "java",
+            "name": "TestFanApp",
+            "request": "launch",
+            "mainClass": "TestFanApp",
+            "projectName": "CIS-505_3e2dc24d"
+        }
+    ]
+}
