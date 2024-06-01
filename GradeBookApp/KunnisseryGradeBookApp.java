@@ -124,16 +124,27 @@ public class KunnisseryGradeBookApp extends Application { /* Begin ZuckGradeBook
     
     private void viewGrades() {
         try {
-            String filterCourse = txtCourse.getText().trim();
+            String filterCourse = txtCourse.getText().trim().replaceAll("^\"|\"$", "");;
+            String filterFirstName = txtFirstName.getText().trim();
+            String filterLastName = txtLastName.getText().trim();
             ArrayList<Student> students = StudentIO.findAll();
             StringBuilder viewedGrades = new StringBuilder();
     
             for (Student student : students) {
-                if (filterCourse.isEmpty() || student.getCourse().equalsIgnoreCase(filterCourse)) {
+                String studentCourse = student.getCourse().replaceAll("^\"|\"$", "");
+                String studentFirstName = student.getFirstName().replaceAll("^\"|\"$", "");
+                String studentLastName = student.getLastName().replaceAll("^\"|\"$", "");
+
+                boolean matchesCourse = filterCourse.isEmpty() || studentCourse.equalsIgnoreCase(filterCourse);
+                boolean matchesFirstName = filterFirstName.isEmpty() || studentFirstName.equalsIgnoreCase(filterFirstName);
+                boolean matchesLastName = filterLastName.isEmpty() || studentLastName.equalsIgnoreCase(filterLastName);
+
+                if (matchesCourse && matchesFirstName && matchesLastName) {
                     viewedGrades.append(student.toString()).append("\n");
+        
                 }
             }
-    
+                
             txtResults.setText(viewedGrades.toString());
             if (viewedGrades.length() == 0) {
                 txtResults.setText("No students found for the course: " + filterCourse);
